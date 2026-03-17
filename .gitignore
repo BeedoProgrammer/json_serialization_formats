@@ -1,0 +1,18 @@
+# Python Virtual Environment
+venv/
+
+# Python Cache
+__pycache__/
+
+# Generated Output Files
+output.avro
+output.msgpack
+output.pb
+output.thrift
+
+# Generated Code (Protobuf and Thrift)
+*_pb2.py
+gen-py/
+
+# Temporary / OS Files
+.~lock.*
