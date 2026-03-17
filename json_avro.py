@@ -41,6 +41,8 @@ schema = {
     ]
 }
 
+data_100 = [data] * 100
+
 # Parse the schema using fastavro
 parsed_schema = fastavro.parse_schema(schema)
 
@@ -49,5 +51,10 @@ with open("output.avro", "wb") as f:
     # Avro always writes a list of records, [data]
     fastavro.writer(f, parsed_schema, [data])
 
+# Write 100x avro file
+with open("output_100.avro", "wb") as f:
+    fastavro.writer(f, parsed_schema, data_100)
+
+print(f"Avro 100:        {os.path.getsize('output_100.avro')} bytes")
 print(f"Avro:            {os.path.getsize('output.avro')} bytes")
 print(f"JSON (minified): {os.path.getsize('data_minified.json')} bytes")
