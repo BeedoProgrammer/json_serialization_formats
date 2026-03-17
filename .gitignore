@@ -5,10 +5,10 @@ venv/
 __pycache__/
 
 # Generated Output Files
-output.avro
-output.msgpack
-output.pb
-output.thrift
+output*.avro
+output*.msgpack
+output*.pb
+output*.thrift
 
 # Generated Code (Protobuf and Thrift)
 *_pb2.py
