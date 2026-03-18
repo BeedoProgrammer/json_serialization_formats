@@ -2,7 +2,7 @@ syntax = "proto3";
 
 message MenuItem {
     string id = 1;
-    string label = 2;
+    optional string label = 2;
 }
 
 message MenuItemWrapper {
